@@ -1,0 +1,62 @@
+﻿<Window x:Class="Lab_4_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_4_App"
+        mc:Ignorable="d"
+        Title="Book Management" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ToolBar Grid.Column="1" Grid.Row="0">
+            <Button Content="Create" Width="100" Margin="5" Click="CreateButton_Click" Name="CreateButton"/>
+            <Button Content="Update" Width="100" Margin="5" Click="UpdateButton_Click"/>
+            <Button Content="Delete" Width="100" Margin="5" Click="DeleteButton_Click"/>
+        </ToolBar>
+
+        <ListBox Grid.Row="1" 
+                 Grid.ColumnSpan="2" 
+                 Margin="5"
+                 Name="list"
+                 ItemsSource="{Binding}"
+                 DisplayMemberPath="Name" 
+                 SelectionChanged="list_SelectionChanged"/>
+
+        <TextBlock Grid.Row="2" Margin="5">ISBN:</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="ISBNTextBox"
+                 Text="{Binding Path=ISBN, Mode=TwoWay}"/>
+
+        <TextBlock Grid.Row="3" Margin="5">Name:</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="NameTextBox"
+                 Text="{Binding Path=Name, Mode=TwoWay}"
+                 Focusable="True"/>
+
+        <TextBlock Grid.Row="4" Margin="5">Author:</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="AuthorTextBox"
+                 Text="{Binding Path=Author, Mode=TwoWay}"
+                 Focusable="True" />
+
+        <TextBlock Grid.Row="5" Margin="5">Publisher:</TextBlock>
+        <TextBox Grid.Row="5" Grid.Column="1" Name="PublisherTextBox"
+                 Text="{Binding Path=Publisher, Mode=TwoWay}"
+                 Focusable="True" />
+
+        <TextBlock Grid.Row="6" Margin="5">Year:</TextBlock>
+        <TextBox Grid.Row="6" Grid.Column="1" Name="YearTextBox"
+                 Text="{Binding Path=Year, Mode=TwoWay}"
+                 Focusable="True" />
+    </Grid>
+</Window>
