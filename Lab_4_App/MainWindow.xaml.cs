@@ -95,7 +95,7 @@ namespace Lab_4_App
             YearTextBox.Clear();
         }
 
-
+        /*
         // Обробник події вибору елемента у ListBox
         private void list_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
@@ -108,5 +108,6 @@ namespace Lab_4_App
                 //LoadBooks();
             }
         }
+        */
     }
 }
