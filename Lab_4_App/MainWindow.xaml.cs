@@ -86,6 +86,15 @@ namespace Lab_4_App
             YearTextBox.Clear();
         }
 
+        private void ClearFields_Click(object sender, RoutedEventArgs e)
+        {
+            ISBNTextBox.Clear();
+            NameTextBox.Clear();
+            AuthorTextBox.Clear();
+            PublisherTextBox.Clear();
+            YearTextBox.Clear();
+        }
+
 
         // Обробник події вибору елемента у ListBox
         private void list_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

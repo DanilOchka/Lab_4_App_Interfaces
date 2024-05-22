@@ -25,6 +25,7 @@
             <Button Content="Create" Width="100" Margin="5" Click="CreateButton_Click" Name="CreateButton"/>
             <Button Content="Update" Width="100" Margin="5" Click="UpdateButton_Click"/>
             <Button Content="Delete" Width="100" Margin="5" Click="DeleteButton_Click"/>
+            <Button Content="Clear all fields" Width="100" Margin="5" Click="ClearFields_Click"/>
         </ToolBar>
 
         <ListBox Grid.Row="1" 
